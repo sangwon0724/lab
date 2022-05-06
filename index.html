@@ -28,6 +28,21 @@
             <button onclick="clickFacebook()">
                 페이스북
             </button>
+            <button onclick="f1()">
+                f1
+            </button>
+            <button onclick="f2()">
+                f2
+            </button>
+            <button onclick="f3()">
+                f3
+            </button>
+            <button onclick="f4()">
+                f4
+            </button>
+            <button onclick="f5()">
+                f5
+            </button>
         </ul>
     </nav>
     <br>
@@ -69,6 +84,21 @@
                     location.href = "myappandroi://";
                 } ,0 );
             }
+        }
+        function f1(){
+            location.href = 'intent://main/#Intent;scheme=fb://page/LGTWINSSEOUL;package=com.facebook.katana;end';
+        }
+        function f2(){
+            location.href = 'fb://facewebmodal/f?href=https://m.facebook.com/LGTWINSSEOUL/';
+        }
+        function f3(){
+            location.href = 'https://www.facebook.com/LGTWINSSEOUL';
+        }
+        function f4(){
+            location.href = 'fb://facewebmodal/f?href=LGTWINSSEOUL';
+        }
+        function f5(){
+            location.href = 'fb://facewebmodal/f?href=https://www.facebook.com/LGTWINSSEOUL';
         }
     </script>
 </body>
