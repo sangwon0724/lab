@@ -21,7 +21,7 @@
                 </a>
             </li>
             <li>
-                <a href="javascript:void(0)" onclick="openSns.facebook()()">
+                <a href="javascript:void(0)" onclick="openSns.facebook()">
                     페이스북
                 </a>
             </li>
@@ -50,7 +50,9 @@
 
                     var visiteTm = ( new Date() ).getTime();
 
-                    if(os == "AOS") location.href = 'fb://page/997476320324005';
+                    if(os == "AOS"){
+                        location.href = 'fb://page/997476320324005';
+                    }
                     else if (os == "IOS"){
                         //아이폰
                         setTimeout( function () {
@@ -65,7 +67,9 @@
                             location.href = "fb://page/997476320324005";
                         } ,0 );
                     }
-                    else location.href = 'https://m.facebook.com/LGTWINSSEOUL/';
+                    else {
+                        location.href = 'https://m.facebook.com/LGTWINSSEOUL/';
+                    }
                 };
 
                 this.instagram = function(){
