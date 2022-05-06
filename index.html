@@ -16,17 +16,27 @@
                 </a>
             </li>
             <li>
-                <a href="https://www.instagram.com/accounts/login/?next=/lgtwinsbaseballclub/" target="_blank" class="i">
+                <a href="#none" target="_blank" class="i" onclick="clickInstagram()">
                     인스타그램
                 </a>
             </li>
             <li>
-                <a href="fb://about" target="_blank" class="f">
+                <a href="#none" onclick="clickFacebook()">
                     페이스북
                 </a>
             </li>
         </ul>
     </nav>
     <br>
+
+    <script>
+        function clickInstagram(){
+            location.href = "https://www.instagram.com/accounts/login/?next=/lgtwinsbaseballclub/";
+        }
+
+        function clickFacebook(){
+            location.href = "fb://about";
+        }
+    </script>
 </body>
 </html>
