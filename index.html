@@ -41,11 +41,12 @@
                 var userAgent = navigator.userAgent;
             
                 if(userAgent.match(".*Android.*")) return "AOS";
-                else if (serAgent.match(".*iPhone.*") || userAgent.match(".*iPad.*")) return "IOS";
+                else if (userAgent.match(".*iPhone.*") || userAgent.match(".*iPad.*")) return "IOS";
                 else return "NOT_MOBILE";
             },
             facebook : function(){
                 var os = checkOS();
+                var visiteTm = ( new Date() ).getTime();
 
                 if(os == "AOS") location.href = 'fb://page/997476320324005';
                 else if (os == "IOS"){
