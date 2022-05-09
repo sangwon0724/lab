@@ -72,9 +72,15 @@
                 };
 
                 this.facebook = function(){
-                    //var os = this.checkOS();
+                    var os = this.checkOS();
 
-                    location.href = 'fb://page/997476320324005';
+                    if(os == "AOS"){
+                        location.href = 'fb://page/997476320324005';
+                    }
+                    else if (os == "IOS"){
+                        location.href = "fb://page/?id=997476320324005";
+                    }
+
                     setTimeout(function(){
                         if(focusCheck){
                             window.open('https://m.facebook.com/LGTWINSSEOUL/', '_blank');
@@ -117,7 +123,7 @@
                 };
 
                 this.instagram = function(){
-                   // var os = this.checkOS();
+                   var os = this.checkOS();
                     
                    location.href = 'instagram://user?username=lgtwinsbaseballclub';
                     setTimeout(function(){
