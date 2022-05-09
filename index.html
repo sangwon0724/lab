@@ -74,19 +74,28 @@
                         function(){location.href = 'https://m.facebook.com/LGTWINSSEOUL/';},
                         function(){
                                 var xhr = new XMLHttpRequest();
+                                var url = "";
+                                var temp = "<button id='temp'>temp</button>";
 
                                 xhr.onreadystatechange = function() {
                                     if(xhr.readyState == 4 && xhr.status == 200) {
-                                        location.href = 'fb://page/997476320324005';
+                                        $(temp).on("click",function(){
+                                            location.href = 'fb://page/997476320324005';
+                                        });
                                     }
                                     else{
                                         if(os == "AOS"){
-                                            location.href = 'https://play.google.com/store/apps/details?id=com.facebook.katana';
+                                            url = 'https://play.google.com/store/apps/details?id=com.facebook.katana';
                                         }
                                         else if (os == "IOS"){
-                                            location.href = "https://apps.apple.com/app/id1191383137";
+                                            url = "https://apps.apple.com/app/id1191383137";
                                         }
+                                        $(temp).on("click",function(){
+                                            location.href = url;
+                                        });
                                     }
+
+                                    $(temp).click();
                                 }
 
                                 xhr.open('head','fb://page/997476320324005');
