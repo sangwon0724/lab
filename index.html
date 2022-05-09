@@ -81,7 +81,7 @@
                                     if(xhr.readyState == 4 && xhr.status == 200) {
                                         $(temp).on("click",function(){
                                             location.href = 'fb://page/997476320324005';
-                                        });
+                                        }).click();
                                     }
                                     else{
                                         if(os == "AOS"){
@@ -92,10 +92,8 @@
                                         }
                                         $(temp).on("click",function(){
                                             location.href = url;
-                                        });
+                                        }).click();
                                     }
-
-                                    $(temp).click();
                                 }
 
                                 xhr.open('head','fb://page/997476320324005');
