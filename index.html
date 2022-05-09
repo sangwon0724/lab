@@ -58,7 +58,6 @@
         var unloadCheck = true;
         document.addEventListener("unload", function(){
             unloadCheck = false;
-            alert("sss");
         });
 
         var openSns = new function(){
@@ -77,6 +76,7 @@
                     /*setTimeout(function(){
                         location.href = 'https://m.facebook.com/LGTWINSSEOUL/';
                     },1500);*/
+                    alert(unloadCheck);
                     if(unloadCheck){
                         setTimeout(function(){
                             location.href = 'https://m.facebook.com/LGTWINSSEOUL/';
