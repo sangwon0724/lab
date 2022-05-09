@@ -93,10 +93,12 @@
                         {title:"확인", message:"앱으로 여시겠습니까?",type:"confirm",btn_txt1:"취소", btn_txt2:"확인"},
                         function(){location.href = 'https://m.facebook.com/LGTWINSSEOUL/';},
                         function(){
+                            location.href = 'fb://page/997476320324005';
+
                             var xhr = new XMLHttpRequest();
                             xhr.onreadystatechange = function() {
                                 if(xhr.readyState == 4 && xhr.status == 200) {
-                                    location.href = 'fb://page/997476320324005';
+                                   return;
                                 }
                                 else{
                                     if(os == "AOS"){
