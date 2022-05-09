@@ -56,7 +56,7 @@
 
     <script>
         var unloadCheck = true;
-        document.addEventListener("unload", function(){
+        document.addEventListener("beforeunload", function(){
             unloadCheck = false;
         });
 
