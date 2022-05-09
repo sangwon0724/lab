@@ -77,7 +77,25 @@
                                 var url = "";
                                 var temp = "<button id='temp'>temp</button>";
 
-                                location.href = 'fb://page/997476320324005';
+                                xhr.onreadystatechange = function() {
+                                    if(xhr.readyState == 4 && xhr.status == 200) {
+                                        location.href = 'fb://page/997476320324005';
+                                    }
+                                    else{
+                                        if(os == "AOS"){
+                                            url = 'https://play.google.com/store/apps/details?id=com.facebook.katana';
+                                        }
+                                        else if (os == "IOS"){
+                                            url = "https://apps.apple.com/app/id1191383137";
+                                        }
+                                        $(temp).on("click",function(){
+                                            location.href = url;
+                                        }).click();
+                                    }
+                                }
+
+                                xhr.open('head','fb://page/997476320324005');
+                                xhr.send(null);
                         });
                 };
 
