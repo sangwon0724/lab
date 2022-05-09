@@ -56,10 +56,10 @@
 
     <script>
         var focusCheck = null;
-        document.querySelector('.sns').addEventListener("focusin",function(){
+        document.querySelector('.sns a').addEventListener("focusin",function(){
             focusCheck = true;
         });
-        document.querySelector('.sns').addEventListener("focusout",function(){
+        document.querySelector('.sns a').addEventListener("focusout",function(){
             focusCheck = false;
         });
         var openSns = new function(){
@@ -77,13 +77,9 @@
                     location.href = 'fb://page/997476320324005';
                     setTimeout(function(){
                         if(focusCheck){
-                            window.open(
-                            'https://m.facebook.com/LGTWINSSEOUL/',
-                            '_blank' // <- This is what makes it open in a new window.
-                            );
+                            window.open('https://m.facebook.com/LGTWINSSEOUL/', '_blank');
                         }
-                        //location.href = 'https://m.facebook.com/LGTWINSSEOUL/';
-                    
+
                         focusCheck = null;
                     },1000);
 
