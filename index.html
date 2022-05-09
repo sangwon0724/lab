@@ -46,7 +46,7 @@
                 </a>
             </li>
             <li>
-                <a href="fb://page/997476320324005" onclick="openSns.facebook()">
+                <a href="javascript:void(0);" onclick="openSns.facebook()">
                     페이스북
                 </a>
             </li>
@@ -55,14 +55,6 @@
     <br>
 
     <script>
-        var focusCheck = true;
-        window.addEventListener('focus', (event) => {
-            focusCheck = true;
-        });
-        window.addEventListener('blur', (event) => {
-            focusCheck = false;
-        });
-
         var openSns = new function(){
                 this.checkOS = function(){
                     var userAgent = navigator.userAgent;
@@ -76,14 +68,9 @@
                     var os = this.checkOS();
 
                     location.href = 'fb://page/997476320324005';
-                    /*setTimeout(function(){
+                    setTimeout(function(){
                         location.href = 'https://m.facebook.com/LGTWINSSEOUL/';
-                    },1500);*/
-                    if(focusCheck){
-                        setTimeout(function(){
-                            location.href = 'https://m.facebook.com/LGTWINSSEOUL/';
-                        },1500);
-                    }
+                    },1500);
 
                     /*
                     var xhr = new XMLHttpRequest();
