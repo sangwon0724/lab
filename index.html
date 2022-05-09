@@ -41,7 +41,7 @@
                 </a>
             </li>
             <li>
-                <a href="https://www.instagram.com/lgtwinsbaseballclub/" class="i" onclick="">
+                <a href="javascript:void(0);" class="i" onclick="openSns.instagram()">
                     인스타그램
                 </a>
             </li>
@@ -72,7 +72,7 @@
                 };
 
                 this.facebook = function(){
-                    var os = this.checkOS();
+                    //var os = this.checkOS();
 
                     location.href = 'fb://page/997476320324005';
                     setTimeout(function(){
@@ -117,11 +117,17 @@
                 };
 
                 this.instagram = function(){
-                    var os = this.checkOS();
+                   // var os = this.checkOS();
                     
-                    location.href = "https://www.instagram.com/lgtwinsbaseballclub/";
-                    
+                   location.href = 'instagram://user?username=lgtwinsbaseballclub';
+                    setTimeout(function(){
+                        if(focusCheck){
+                            window.open('https://www.instagram.com/lgtwinsbaseballclub/', '_blank');
+                        }
 
+                        focusCheck = null;
+                    },1000);
+                    
                    /*
                    customAlert(
                         {title:"확인", message:"앱으로 여시겠습니까?",type:"confirm",btn_txt1:"취소", btn_txt2:"확인"},
