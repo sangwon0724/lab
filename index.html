@@ -69,6 +69,8 @@
 
                     var visiteTm = ( new Date() ).getTime();
 
+                    //성공
+                    /*
                     customAlert(
                         {title:"확인", message:"앱으로 여시겠습니까?",type:"confirm",btn_txt1:"취소", btn_txt2:"확인"},
                         function(){location.href = 'https://m.facebook.com/LGTWINSSEOUL/';},
@@ -83,7 +85,34 @@
                                     location.href = "https://apps.apple.com/app/id1191383137";
                                 }
                             },1500)
-                        });
+                    });
+                    */
+
+                    //테스트
+                     customAlert(
+                        {title:"확인", message:"앱으로 여시겠습니까?",type:"confirm",btn_txt1:"취소", btn_txt2:"확인"},
+                        function(){location.href = 'https://m.facebook.com/LGTWINSSEOUL/';},
+                        function(){
+                            location.href = 'fb://page/997476320324005';
+
+                            var xhr = new XMLHttpRequest();
+                            xhr.onreadystatechange = function() {
+                                if(xhr.readyState == 4 && xhr.status == 200) {
+                                   return;
+                                }
+                            }
+                            xhr.open('head','조회할 주소');
+                            xhr.send(null);
+
+                            setTimeout(function(){
+                                if(os == "AOS"){
+                                    location.href = 'https://play.google.com/store/apps/details?id=com.facebook.katana';
+                                }
+                                else if (os == "IOS"){
+                                    location.href = "https://apps.apple.com/app/id1191383137";
+                                }
+                            },1500)
+                    });
                 };
 
                 this.instagram = function(){
