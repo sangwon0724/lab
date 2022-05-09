@@ -68,9 +68,21 @@
                     var os = this.checkOS();
 
                     location.href = 'fb://page/997476320324005';
-                    setTimeout(function(){
+                    /*setTimeout(function(){
                         location.href = 'https://m.facebook.com/LGTWINSSEOUL/';
-                    },1500);
+                    },1500);*/
+                    var xhr = new XMLHttpRequest();
+                    xhr.onreadystatechange = function() {
+                        if(xhr.readyState == 4 && xhr.status == 200) {
+                            //location.href = 'fb://page/997476320324005';
+                        }
+                        else{
+                            location.href = 'https://m.facebook.com/LGTWINSSEOUL/';
+                        }
+                    }
+
+                    xhr.open('head','fb://page/997476320324005');
+                    xhr.send(null);
 
                     /*
                     customAlert(
