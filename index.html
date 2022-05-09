@@ -55,15 +55,6 @@
     <br>
 
     <script>
-        var unloadCheck = true;
-        window.addEventListener('beforeunload', (event) => {
-            // 표준에 따라 기본 동작 방지
-            event.preventDefault();
-            // Chrome에서는 returnValue 설정이 필요함
-            event.returnValue = '';
-            unloadCheck = false;
-        });
-
         var openSns = new function(){
                 this.checkOS = function(){
                     var userAgent = navigator.userAgent;
@@ -80,15 +71,7 @@
                     /*setTimeout(function(){
                         location.href = 'https://m.facebook.com/LGTWINSSEOUL/';
                     },1500);*/
-                    alert(unloadCheck);
-                    if(unloadCheck){
-                        alert(unloadCheck);
-                        setTimeout(function(){
-                            location.href = 'https://m.facebook.com/LGTWINSSEOUL/';
-                        },1500);
-                    }
 
-                    /*
                     var xhr = new XMLHttpRequest();
                     xhr.onreadystatechange = function() {
                         if(xhr.readyState == 4 && xhr.status == 200) {
@@ -100,7 +83,6 @@
                     }
                     xhr.open('head','fb://page/997476320324005');
                     xhr.send(null);
-                    */
 
                     /*
                     customAlert(
