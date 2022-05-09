@@ -56,9 +56,9 @@
 
     <script>
         var unloadCheck = true;
-        window.addEventListener("unload"), function(){
+        document.addEventListener("unload", function(){
             unloadCheck = false;
-        };
+        });
 
         var openSns = new function(){
                 this.checkOS = function(){
