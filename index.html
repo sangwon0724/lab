@@ -69,38 +69,40 @@
 
                     var visiteTm = ( new Date() ).getTime();
 
-                    if(os == "AOS"){
-                        try {
-                            location.href = 'fb://page/997476320324005';
-                        } catch (error) {
-                            location.href = 'https://play.google.com/store/apps/details?id=com.facebook.katana';
-                        }
-                    }
-                    else if (os == "IOS"){
-                        //아이폰
-                        setTimeout( function () {
-                            if ( ( new Date() ).getTime() - visiteTm < 3000 )
-                            {
-                                // 앱스토어 이동
-                                location.href = "https://apps.apple.com/app/id1191383137";
+                    customAlert(
+                        {title:"타이틀", message:"메시지",type:"confirm",btn_txt1:"취소", btn_txt2:"확인"},
+                        function(){location.href = 'https://m.facebook.com/LGTWINSSEOUL/';},
+                        function(){
+                            if(os == "AOS"){
+                                try {
+                                    location.href = 'fb://page/997476320324005';
+                                } catch (error) {
+                                    location.href = 'https://play.google.com/store/apps/details?id=com.facebook.katana';
+                                }
                             }
-                        } ,2500 );
-                        setTimeout( function () {
-                            // 앱실행
-                            location.href = "fb://page/997476320324005";
-                        } ,0 );
+                            else if (os == "IOS"){
+                                //아이폰
+                                setTimeout( function () {
+                                    if ( ( new Date() ).getTime() - visiteTm < 3000 )
+                                    {
+                                        // 앱스토어 이동
+                                        location.href = "https://apps.apple.com/app/id1191383137";
+                                    }
+                                } ,2500 );
+                                setTimeout( function () {
+                                    // 앱실행
+                                    location.href = "fb://page/997476320324005";
+                                } ,0 );
 
-                        /*
-                        try {
-                            location.href = 'fb://page/997476320324005';
-                        } catch (error) {
-                            location.href = 'https://apps.apple.com/app/id1191383137';
-                        }
-                        */
-                    }
-                    else {
-                        location.href = 'https://m.facebook.com/LGTWINSSEOUL/';
-                    }
+                                /*
+                                try {
+                                    location.href = 'fb://page/997476320324005';
+                                } catch (error) {
+                                    location.href = 'https://apps.apple.com/app/id1191383137';
+                                }
+                                */
+                            }
+                        });
                 };
 
                 this.instagram = function(){
