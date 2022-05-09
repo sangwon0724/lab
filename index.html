@@ -55,6 +55,13 @@
     <br>
 
     <script>
+        var focusCheck = null;
+        document.querySelector('.sns').addEventListener("focusin",function(){
+            focusCheck = true;
+        });
+        document.querySelector('.sns').addEventListener("focusout",function(){
+            focusCheck = false;
+        });
         var openSns = new function(){
                 this.checkOS = function(){
                     var userAgent = navigator.userAgent;
@@ -69,8 +76,16 @@
 
                     location.href = 'fb://page/997476320324005';
                     setTimeout(function(){
-                        location.href = 'https://m.facebook.com/LGTWINSSEOUL/';
-                    },1500);
+                        if(focusCheck){
+                            window.open(
+                            'https://m.facebook.com/LGTWINSSEOUL/',
+                            '_blank' // <- This is what makes it open in a new window.
+                            );
+                        }
+                        //location.href = 'https://m.facebook.com/LGTWINSSEOUL/';
+                    
+                        focusCheck = null;
+                    },1000);
 
                     /*
                     var xhr = new XMLHttpRequest();
