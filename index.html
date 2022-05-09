@@ -100,17 +100,20 @@
                                 if(xhr.readyState == 4 && xhr.status == 200) {
                                    return;
                                 }
+                                else{
+                                    if(os == "AOS"){
+                                        location.href = 'https://play.google.com/store/apps/details?id=com.facebook.katana';
+                                    }
+                                    else if (os == "IOS"){
+                                        location.href = "https://apps.apple.com/app/id1191383137";
+                                    }
+                                }
                             }
                             xhr.open('head','조회할 주소');
                             xhr.send(null);
 
                             setTimeout(function(){
-                                if(os == "AOS"){
-                                    location.href = 'https://play.google.com/store/apps/details?id=com.facebook.katana';
-                                }
-                                else if (os == "IOS"){
-                                    location.href = "https://apps.apple.com/app/id1191383137";
-                                }
+                                
                             },1500)
                     });
                 };
