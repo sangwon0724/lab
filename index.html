@@ -5,31 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
-    <style>
-        /******** layerpopup ********/
-        .layerpop-wrap { position:fixed; width:100%; height:100%; background:rgba(0, 0, 0, 0.4); left:0px; top:0px; z-index: 99999; display:none; }
-        .layerpop-wrap .layerpop { position:fixed; overflow: hidden; width: 88%; min-width: 320px; top:50%; left:50%; transform: translate(-50%, -50%); border-radius:4px; }
-        .layerpop-wrap .layerpop .layer-body { padding: 24px; background-color: #fff; }
-        .layerpop-wrap .layerpop .layer-body .tit { color: #090A0F; }
-        .layerpop-wrap .layerpop .layer-footer { position: relative; height: 36px; line-height: 36px; background-color: #DBE1E8; }
-        .layerpop-wrap .layerpop .layer-footer .btn-layer-close { position: absolute; right: 0px; bottom: 0px; background-image: url(/web_twins/images/icon_close.svg); background-repeat: no-repeat; background-position: left center; background-size: 16px; padding-left: 24px; padding-right: 16px; height: 36px; line-height: 36px; color: #768090; font-size: 16px; }
-        .custom-alert { position:fixed; text-align:left;  z-index:99999; background-color:#222D3A; box-shadow:0 4px 8px 0 rgba(0,0,0,0.50); width:88%; max-width: 366px;  padding: 24px; }
-        .custom-alert .title { font-size:20px; font-weight:400; color:#fff; margin-bottom:8px; line-height:26px; }
-        .custom-alert .message { font-size:14px; color:#A2A9BB; line-height:20px; word-break:keep-all; }
-        .custom-alert .btn-wrap { margin-top: 32px; text-align: right; }
-        .custom-alert .btn-wrap .wbtn { width:auto !important; height: 26px; min-width: auto; margin:0px; font-size:16px; font-weight: normal; line-height: 1; color: #fff; padding: 0px 12px; background-color: transparent; }
-        .layerpop-wrap .layerpop { color: #222D3A; }
-        .layerpop-wrap .layerpop .form-wrap input { border: 1px solid #354252; color: #354252; background-color: transparent; }
-        .layerpop-wrap .layerpop .form-wrap input:read-only { border: 1px solid #354252; color: #354252; background-color: transparent; }
-        .layerpop-wrap .layerpop .form-wrap .input-item { position: relative; }
-        .layerpop-wrap .layerpop .form-wrap .input-item.has-unit { position: relative; }
-        .layerpop-wrap .layerpop .form-wrap .input-item.has-unit .unit-txt { color: #090A0F;  }
-        .layerpop-wrap .layerpop .form-wrap .input-item.has-unit input { padding-right: 40px; }
-        .layerpop-wrap .layerpop .tit-bar { color: #090A0F; font-size: 16px; font-weight: normal; }
-        .layerpop-wrap .layerpop .bullet { color: #354252; }
-        .layerpop-wrap .layerpop .desc { color: #768090; }
-    </style>
 </head>
 <body>
     <h2>모바일 브라우저에서 링크 클릭시 앱 열리게 하기</h2>
@@ -88,38 +63,6 @@
 
                         focusCheck = null;
                     },1000);
-
-                    /*
-                    var xhr = new XMLHttpRequest();
-                    xhr.onreadystatechange = function() {
-                        if(xhr.readyState == 4 && xhr.status == 200) {
-                            //location.href = 'fb://page/997476320324005';
-                        }
-                        else{
-                            location.href = 'https://m.facebook.com/LGTWINSSEOUL/';
-                        }
-                    }
-                    xhr.open('head','fb://page/997476320324005');
-                    xhr.send(null);
-                    */
-
-                    /*
-                    customAlert(
-                        {title:"확인", message:"앱으로 여시겠습니까?",type:"confirm",btn_txt1:"취소", btn_txt2:"확인"},
-                        function(){location.href = 'https://m.facebook.com/LGTWINSSEOUL/';},
-                        function(){
-                            location.href = 'fb://page/997476320324005';
-
-                            setTimeout(function(){
-                                if(os == "AOS"){
-                                    location.href = 'https://play.google.com/store/apps/details?id=com.facebook.katana';
-                                }
-                                else if (os == "IOS"){
-                                    location.href = "https://apps.apple.com/app/id284882215";
-                                }
-                            },1500);
-                    });
-                    */
                 };
 
                 this.instagram = function(){
@@ -133,117 +76,8 @@
 
                         focusCheck = null;
                     },1000);
-                    
-                   /*
-                   customAlert(
-                        {title:"확인", message:"앱으로 여시겠습니까?",type:"confirm",btn_txt1:"취소", btn_txt2:"확인"},
-                        function(){location.href = 'https://www.instagram.com/lgtwinsbaseballclub/';},
-                        function(){
-                            location.href = "instagram://user?username=lgtwinsbaseballclub";
-
-                            setTimeout(function(){
-                                if(os == "AOS"){
-                                    location.href = 'https://play.google.com/store/apps/details?id=com.instagram.android';
-                                }
-                                else if (os == "IOS"){
-                                    location.href = "https://apps.apple.com/app/id389801252";
-                                }
-                            },1500);
-                    });
-                    */
                 };
         }();
-
-        //성공 - 앱>트윈스>프로필 ★★★
-        //'fb://page/997476320324005';
-
-        //성공 - 앱>메인
-        //'fb://page/LGTWINSSEOUL'
-        //'fb://profile/LGTWINSSEOUL'
-        //'fb://page/?id=LGTWINSSEOUL'
-        //'fb://page/?id=997476320324005'
-
-        //성공 - 앱>트윈스>홈
-        //'fb://facewebmodal/f?href=https://m.facebook.com/LGTWINSSEOUL/'
-        //'https://www.facebook.com/n/?LGTWINSSEOUL'
-        //'fb://faceweb/f?href=https://www.facebook.com/n/?LGTWINSSEOUL'
-        //'fb://faceweb/f?href=https://www.facebook.com/LGTWINSSEOUL'
-        //'fb://faceweb/f?href=https://m.facebook.com/LGTWINSSEOUL'
-
-        //모바일 브라우저
-        //location.href = 'https://www.facebook.com/LGTWINSSEOUL'
-        //'https://www.facebook.com/p/?LGTWINSSEOUL'
-        //'https://www.facebook.com/f/?LGTWINSSEOUL'
-
-        //공백
-        /*
-        'fb://faceweb/f?href=LGTWINSSEOUL'
-        */
-
-        //popup
-        function openPopup(id) {
-            var _target = $('#' + id);
-            _target.fadeIn(300);
-            _target.focus();
-            _target.find('.btn-layer-close').on('click', function() {
-                closePopup(id);
-            });
-        }
-
-        function closePopup(id) {
-            $('#' + id).fadeOut(300);
-        }
-
-        function customAlert(_option,_callback1,_callback2){
-            var _html = "";
-            _html += "<div class=\"layerpop-wrap\" id=\"customAlertLayer\">";
-            _html += "  <div class=\"layerpop custom-alert\">";
-            _html +=     "<p class=\"title\">"+_option.title+"</p>";
-            _html +=     "<p class=\"message\">"+_option.message+"</p>";
-            _html +=     "<div class=\"btn-wrap\">";
-            if(_option.type == "confirm"){
-                if(typeof _option.btn_txt1 != "undefined"){
-                    _html +=         "<button type=\"button\" name=\"button\" class=\"wbtn c-cancle\">"+_option.btn_txt1+"</button>";
-                }else{
-                    _html +=         "<button type=\"button\" name=\"button\" class=\"wbtn c-cancle\">취소</button>";
-                }
-                if(typeof _option.btn_txt2 != "undefined"){
-                    _html +=         "<button type=\"button\" name=\"button\" class=\"wbtn c-confirm\">"+_option.btn_txt2+"</button>";
-                }else{
-                    _html +=         "<button type=\"button\" name=\"button\" class=\"wbtn c-confirm\">확인</button>";
-                }
-            }else{
-                if(typeof _option.btn_txt1 != "undefined"){
-                    _html +=         "<button type=\"button\" name=\"button\" class=\"wbtn c-cancle\">"+_option.btn_txt1+"</button>";
-                }else if(typeof _option.btn_txt2 != "undefined"){
-                    _html +=         "<button type=\"button\" name=\"button\" class=\"wbtn c-cancle\">"+_option.btn_txt2+"</button>";
-                }
-            }
-
-            _html +=     "</div>";
-            _html += "  </div>";
-            _html += "</div>";
-            $('body').append(_html.replace(/(\n|\r\n)/g, '<br>'));
-            // addBlock("fixed");
-            openPopup("customAlertLayer");
-            $('#customAlertLayer .c-cancle').on('click', function () {
-                if (typeof _callback1 === "function") {
-                    _callback1();
-                }
-                customAlertDel();
-            });
-            $('#customAlertLayer .c-confirm').on('click', function () {
-                if (typeof _callback2 === "function") {
-                    _callback2();
-                }
-                customAlertDel();
-            });
-            function customAlertDel(){
-                closePopup("customAlertLayer");
-                $('#customAlertLayer').fadeOut().empty().remove();
-            }
-        }
-        //customAlert({title:"타이틀", message:"메시지",type:"confirm",btn_txt1:"취소", btn_txt2:"확인"},function(){},function(){})
     </script>
 </body>
 </html>
