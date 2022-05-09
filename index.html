@@ -56,10 +56,10 @@
 
     <script>
         var focusCheck = null;
-        document.querySelector('.sns a').addEventListener("focusin",function(){
+        document.querySelector('.sns').addEventListener("focusin",function(){
             focusCheck = true;
         });
-        document.querySelector('.sns a').addEventListener("focusout",function(){
+        document.querySelector('.sns').addEventListener("focusout",function(){
             focusCheck = false;
         });
         var openSns = new function(){
