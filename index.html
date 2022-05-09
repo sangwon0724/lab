@@ -67,6 +67,24 @@
                 this.facebook = function(){
                     var os = this.checkOS();
 
+                    //location.href = 'fb://page/997476320324005';
+                    /*setTimeout(function(){
+                        location.href = 'https://m.facebook.com/LGTWINSSEOUL/';
+                    },1500);*/
+                    var xhr = new XMLHttpRequest();
+                    xhr.onreadystatechange = function() {
+                        if(xhr.readyState == 4 && xhr.status == 200) {
+                            location.href = 'fb://page/997476320324005';
+                        }
+                        else{
+                            location.href = 'https://m.facebook.com/LGTWINSSEOUL/';
+                        }
+                    }
+
+                    xhr.open('head','fb://page/997476320324005');
+                    xhr.send(null);
+
+                    /*
                     customAlert(
                         {title:"확인", message:"앱으로 여시겠습니까?",type:"confirm",btn_txt1:"취소", btn_txt2:"확인"},
                         function(){location.href = 'https://m.facebook.com/LGTWINSSEOUL/';},
@@ -82,15 +100,17 @@
                                 }
                             },1500);
                     });
+                    */
                 };
 
                 this.instagram = function(){
                     var os = this.checkOS();
                     
-                    //location.href = "https://www.instagram.com/lgtwinsbaseballclub/";
+                    location.href = "https://www.instagram.com/lgtwinsbaseballclub/";
                     
 
-                    customAlert(
+                   /*
+                   customAlert(
                         {title:"확인", message:"앱으로 여시겠습니까?",type:"confirm",btn_txt1:"취소", btn_txt2:"확인"},
                         function(){location.href = 'https://www.instagram.com/lgtwinsbaseballclub/';},
                         function(){
@@ -105,6 +125,7 @@
                                 }
                             },1500);
                     });
+                    */
                 };
         }();
 
